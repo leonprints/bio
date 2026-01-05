@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html style="background-color:#000000">
+<head>
+<meta charset="UTF-8">
+<title>Leon Printing</title>
+
+<style>
+/* Fade-in */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Box personalizzati */
+.box {
+  width: 40%;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgba(0, 191, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 40px 15px rgba(0, 191, 255, 0.5);
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: auto;
+  margin-bottom: 300px;
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="fade" style="color:#00BFFF; font-family:verdana; font-size:60px; text-align:center; margin-top:50px;">
+Leon Printing
+</h1>
+
+<img class="fade" src="Reactor.jpeg">
+
+<pre class="fade" style="color:#16E2F5; font-family:verdana; font-size:25px; text-align:center; margin-bottom:100px;">
+Hello there! Glad you landed on my page.
+Let me introduce, I'm Leon, a 16 years old kid 
+with a mad passion for everything that concerns
+science, electronics, mechanics and, of course, 3D printing.
+</pre>
+
+<h2 class="fade" style="color:#00BFFF; font-family:verdana; font-size:40px; text-align:center;">
+So what exactly do I do?
+</h2>
+
+<pre class="fade" style="color:#16E2F5; font-family:verdana; font-size:23px; text-align:center;">
+Well in this page you'll find out about
+my past works and about what I can do now.
+</pre>
+
+<table align="center">
+<tr>
+<td align="right">
+<pre class="fade" style="color:#00BFFF; font-family:verdana; font-size:20px; text-align:center;">
+<b>
+Everything started because I wanted 
+my very own realistic Iron Man glove.
+I looked for a 3D printing center 
+that made it possible and then
+eventually got very hyped and... well
+the rest is history.
+</b>
+</pre>
+</td>
+
+<td width="40"></td>
+
+<td align="left">
+<img class="fade" src="Glove.png" width="400">
+</td>
+</tr>
+</table>
+
+<pre class="fade" style="color:#00BFFF; font-family:verdana; font-size:30px; text-align:center;">
+I kept learning...
+</pre>
+<img class="fade" src="Proto.png" width="300">
+
+<pre class="fade" style="color:#00BFFF; font-family:verdana; font-size:30px; text-align:center;">
+...getting better...
+</pre>
+<img class="fade" src="Mk42.png" width="300">
+
+<pre class="fade" style="color:#00BFFF; font-family:verdana; font-size:30px; text-align:center;">
+...and better.
+</pre>
+<img class="fade" src="Redhood.png" width="300">
+
+<pre class="fade" style="color:#00BFFF; font-family:verdana; font-size:30px; text-align:center;">
+I studied electronics enough
+to design my own circuit boards
+until...
+</pre>
+<img class="fade" src="JIM.png" width="300">
+
+<pre class="fade" style="color:#00BFFF; font-family:verdana; font-size:30px; text-align:center;">
+<b>I finally achieved my dream.</b>
+</pre>
+<img class="fade" src="Warmachine.png" width="300">
+
+<div class="box fade">
+<pre style="color:#16E2F5; font-family:verdana; font-size:140%; text-align:center;">
+Today, I can confidently say
+I could help you with:
+- 3D printing (and a little CAD);
+- C++ and Python coding;
+- PCB design;
+- Electronics project building.
+</pre>
+</div>
+
+<div class="box fade" style="width:60%;">
+<pre style="color:#16E2F5; font-family:verdana; font-size:140%; text-align:center;">
+If you have any questions, requests or 
+you'd like to work together,
+feel free to contact me!
+
+IG: @leon_prints_stuff
+E-mail: leonprinting.qna@gmail.com
+</pre>
+</div>
+
+<script>
+function handleFade() {
+  document.querySelectorAll('.fade').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
+      el.classList.add('show');
+    }
+  });
+}
+
+document.addEventListener('scroll', handleFade);
+
+window.onload = () => {
+  const elements = document.querySelectorAll('.fade');
+
+  // fade-in iniziale sequenziale (4 elementi)
+  for (let i = 0; i < 4; i++) {
+    setTimeout(() => {
+      elements[i].classList.add('show');
+    }, i * 400);
+  }
+
+  // attiva subito quelli già visibili
+  handleFade();
+};
+</script>
+
+</body>
+</html>
